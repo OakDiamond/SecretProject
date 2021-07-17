@@ -32,7 +32,7 @@ function setup(){
 	back.addImage(backImg)
 	back.velocityX = -2
 
-	player = createSprite(windowWidth-150,windowHeight-350,50,100)
+	player = createSprite(windowWidth-150,windowHeight-200,50,100)
 	player.scale = 1.5
 	player.addAnimation("img",playerImg)
 	player.addAnimation("change",playerC)
@@ -40,6 +40,7 @@ function setup(){
 	jf = createSprite(windowWidth-850,windowHeight-450,35,35)
 	jf.velocityY = 5
 	jf.visible = false
+	
 
 	hf = createSprite(windowWidth-850,windowHeight-300,35,35)
 	hf.velocityY = 5
@@ -153,6 +154,7 @@ function draw(){
 	text("Score :"+ score,110,150)
 	
     if(gameState === END){
+		
 	textSize(75)
 	fill(255)
 	text("GAME OVER",500,350)
@@ -161,6 +163,7 @@ function draw(){
 	}
 
 	function reset(){
+
 		gameState = PLAY
 		player.x = 150
 		player.changeAnimation("img",playerImg)
